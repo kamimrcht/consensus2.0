@@ -9,13 +9,13 @@ def subprocessLauncher(cmd, argstdout=None, argstderr=None,	 argstdin=None):
 		p = subprocess.call(args, stdin = argstdin, stdout = argstdout, stderr = argstderr)
 		return p
 
-#~ for error in [10]:
-	#~ for length in [500]:
-		#~ for cycles in [3]:
-for i in range(10):
-	for error in [10,15,20]:
-		for length in [100,500,1000]:
-			for cycles in [2,3,4,5]:
+for error in [10]:
+	for length in [500]:
+		for cycles in [3]:
+#for i in range(10):
+#	for error in [10,15,20]:
+#		for length in [100,500,1000]:
+#			for cycles in [2,3,4,5]:
 				print('#error ' +str(error) + " length " +str(length) + " cycles " + str(cycles))
 				cmd = "rm final_consensus.fa "
 				subprocessLauncher(cmd)
